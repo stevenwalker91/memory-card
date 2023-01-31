@@ -4,7 +4,7 @@ import Characters from '../assets/data';
 import { v4 as uuidv4 } from 'uuid';
 import Card from './Card';
 
-const Gameboard = ({handleCardClick}) => {
+const Gameboard = ({handleCardClick, selectedCards}) => {
 
   const shuffle = (arr) => {
     let index = arr.length;
@@ -19,8 +19,34 @@ const Gameboard = ({handleCardClick}) => {
   }
 
   const generateGamePieces = (arr) => {
+    // initialise counter to limit filter results
+    let counter = 0;
+
+    // filter will check if this is true to determine if valid option exists
+    let containsValidValue = false;
+
+    // shuffle the array so it's completely random
     const shuffledArray = shuffle(arr);
-    const filteredArray = shuffledArray.filter((item, index) => index < 5);
+    
+    // we need to make sure the filtered list has at least one valid option
+    const filter = (item, index) => {
+      
+      let validValue = !selectedCards.includes(item.id);
+      validValue ? containsValidValue = true : containsValidValue = false;
+
+      if (index === 5 && !containsValidValue ) {
+        console.log(`${item.id} is not valid`)
+        return false
+      }
+
+      // limit so we can only get 5 results
+      if (counter < 5) {
+        counter ++;
+      return true
+      }
+
+    }
+    const filteredArray = shuffledArray.filter(filter);
     return filteredArray.map((item) => {
       return (
         <Card 
@@ -41,7 +67,8 @@ const Gameboard = ({handleCardClick}) => {
 }
 
 Gameboard.propTypes = {
-  handleCardClick: PropTypes.func.isRequired
+  handleCardClick: PropTypes.func.isRequired,
+  selectedCards: PropTypes.array.isRequired
 };
 
 export default Gameboard;
