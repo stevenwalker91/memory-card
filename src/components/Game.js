@@ -26,43 +26,42 @@ const Game = () => {
   const newGame = () => {
     resetScores();
     setStatus('play');
-  }
+  };
 
   const handleWin = () => {
     console.log(`gameover`)
     setSelectedCards([]);
     setStatus('win');
-  }
+  };
 
   const handleLose = () => {
     setSelectedCards([]);
     setStatus('lose');
-  }
+  };
 
   const makeMove = (id) => {
     const currentCards = selectedCards;
     currentCards.push(id);
     setSelectedCards(currentCards);
     updateScore();
-
-  }
+  };
 
   const handleCardClick = (id) => {
     const selectedAlready = selectedCards.includes(id);
 
-
     if (selectedAlready) {
       handleLose();
     }
+
     if (!selectedAlready){
       makeMove(id);
     }
 
-    const gameWon = Characters.length === selectedCards.length
+    const gameWon = Characters.length === selectedCards.length;
     if (gameWon) {
       handleWin();
     }
-  }
+  };
 
   return (
     <React.Fragment>
@@ -85,6 +84,6 @@ const Game = () => {
     </React.Fragment>
     
   )
-}
+};
 
 export default Game;

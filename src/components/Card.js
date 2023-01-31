@@ -9,7 +9,6 @@ const Card = ({url, id, name, onClick}) => {
       <span className="card-caption">{name}</span>
     </div>
   )
-
 };
 
 Card.propTypes = {

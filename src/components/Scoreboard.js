@@ -12,12 +12,11 @@ const Scoreboard = ({score, highScore}) => {
         </div>
     </header>
   )
-}
+};
 
 Scoreboard.propTypes = {
   score: PropTypes.number.isRequired,
   highScore: PropTypes.number.isRequired
 };
-
 
 export default Scoreboard;

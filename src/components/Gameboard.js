@@ -43,8 +43,8 @@ const Gameboard = ({handleCardClick, selectedCards}) => {
         counter ++;
       return true
       }
+    };
 
-    }
     const filteredArray = shuffledArray.filter(filter);
     const reShuffle = shuffle(filteredArray);
     return reShuffle.map((item) => {
@@ -59,12 +59,12 @@ const Gameboard = ({handleCardClick, selectedCards}) => {
         />
       )
     })
-  }
+  };
 
   return (
     <main className="gameboard">{generateGamePieces(Characters)}</main>
   )
-}
+};
 
 Gameboard.propTypes = {
   handleCardClick: PropTypes.func.isRequired,
