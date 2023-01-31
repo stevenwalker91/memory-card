@@ -8,32 +8,37 @@ const Game = () => {
   const [scores, setScores] = useState({score: 0, highScore: 0});
   const [selectedCards, setSelectedCards] = useState([]);
 
-  const resetScore = () => {
-    setScore(0);
+  const resetScores = () => {
+    setScores({score: 0, highScore: scores.highScore})
   }
 
+  // if high score = score then also update
   const updateScore = () => {
-    setScore(score + 1);
+    if (scores.score === scores.highScore) {
+      setScores({score: scores.score + 1, highScore: scores.highScore + 1})
+    } else {
+      setScores({score: scores.score + 1, highScore: scores.highScore})
+    }
   }
 
   const handleCardClick = (id) => {
-    if (!selectedCards.find(element => element === id)){
-
+    const selectedAlready = selectedCards.includes(id);
+    if (!selectedAlready){
       //first add the card to the array
       const currentCards = selectedCards;
       currentCards.push(id);
-      console.log(currentCards)
-
       setSelectedCards(currentCards);
-
-      // determine if high score also needs updated
-      if (scores.score === scores.highScore) {
-        setScores({score: scores.score + 1, highScore: scores.highScore + 1})
-      } else {
-        setScores({score: scores.score + 1, highScore: scores.highScore})
-      }
-      
+      updateScore();
+      return
     }
+
+    if (selectedAlready) {
+      resetScores();
+      setSelectedCards([]);
+      setStatus('lose');
+    }
+
+
   }
 
 
