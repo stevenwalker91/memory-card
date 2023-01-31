@@ -1,5 +1,7 @@
 import React from 'react';
 import Characters from '../assets/data';
+import { v4 as uuidv4 } from 'uuid';
+import Card from './Card';
 
 const Gameboard = () => {
 
@@ -16,20 +18,23 @@ const Gameboard = () => {
     return arr;
   }
 
-
   const generateGamePieces = (arr) => {
     const shuffledArray = shuffle(arr);
-
-    return shuffledArray.map((item, index) => {
-      console.log(<img src={`../assets/img/${item.fileName}`} key={index} />)
-      return <img src={`./assets/img/${item.fileName}`} key={index} />
+    const filteredArray = shuffledArray.filter((item, index) => index < 5);
+    return filteredArray.map((item) => {
+      return (
+        <Card 
+          key={uuidv4()}
+          url={`./assets/img/${item.fileName}`}
+          name={item.characterName}
+          id={item.id}
+        />
+      )
     })
   }
 
-
-
   return (
-    <div className="gameboard">{generateGamePieces(Characters)}</div>
+    <main className="gameboard">{generateGamePieces(Characters)}</main>
   )
 }
 
