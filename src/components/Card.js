@@ -6,7 +6,7 @@ const Card = ({url, id, name, onClick}) => {
   return (
     <div className="card" onClick={() => onClick(id)}>
       <img src={url} />
-      <span>{name}</span>
+      <span className="card-caption">{name}</span>
     </div>
   )
 
