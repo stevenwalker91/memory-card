@@ -47,7 +47,8 @@ const Gameboard = ({handleCardClick, selectedCards}) => {
 
     }
     const filteredArray = shuffledArray.filter(filter);
-    return filteredArray.map((item) => {
+    const reShuffle = shuffle(filteredArray);
+    return reShuffle.map((item) => {
       return (
         <Card 
           key={uuidv4()}
