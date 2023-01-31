@@ -1,70 +1,87 @@
 [
   {
     "characterName": "Buzz Lightyear",
-    "fileName": "buzz.png"
+    "fileName": "buzz.png",
+    "id": 1
   },
   {
     "characterName": "Daisy Duck",
-    "fileName": "daisy.webp"
+    "fileName": "daisy.webp",
+    "id": 2
   },
   {
     "characterName": "Donald Duck",
-    "fileName": "donald.png"
+    "fileName": "donald.webp",
+    "id": 3
   },
   {
     "characterName": "Goofy",
-    "fileName": "goofy.webp"
+    "fileName": "goofy.webp",
+    "id": 4
   },
   {
     "characterName": "Grumpy",
-    "fileName": "grumpy.webp"
+    "fileName": "grumpy.webp",
+    "id": 5
   },
   {
     "characterName": "The Mad Hatter",
-    "fileName": "hatter.png"
+    "fileName": "hatter.png",
+    "id": 6
   },
   {
     "characterName": "Captain Hook",
-    "fileName": "hook.webp"
+    "fileName": "hook.webp",
+    "id": 7
   },
   {
     "characterName": "Lilo",
-    "fileName": "lilo.webp"
+    "fileName": "lilo.webp",
+    "id": 8
   },
   {
     "characterName": "Mickey Mouse",
-    "fileName": "micky.png"
+    "fileName": "micky.webp",
+    "id": 9
   },
   {
     "characterName": "Minnie Mouse",
-    "fileName": "minnie.png"
+    "fileName": "minnie.png",
+    "id": 10
   },
   {
     "characterName": "Pluto",
-    "fileName": "pluto.png"
+    "fileName": "pluto.png",
+    "id": 11
   },
   {
     "characterName": "Scrooge McDuck",
-    "fileName": "scrooge.webp"
+    "fileName": "scrooge.webp",
+    "id": 12
   },
   {
     "characterName": "Stitch",
-    "fileName": "stitch.png"
+    "fileName": "stitch.png",
+    "id": 13
   },
   {
     "characterName": "Thumper",
-    "fileName": "thumper.gif"
+    "fileName": "thumper.gif",
+    "id": 14
   },
   {
     "characterName": "Tigger",
-    "fileName": "tigger.webp"
+    "fileName": "tigger.webp",
+    "id": 15
   },
   {
     "characterName": "Winnie The Pooh",
-    "fileName": "winnie.png"
+    "fileName": "winnie.png",
+    "id": 16
   },
   {
     "characterName": "Woody",
-    "fileName": "woody.png"
+    "fileName": "woody.png",
+    "id": 17
   }
 ]
