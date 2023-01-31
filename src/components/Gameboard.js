@@ -29,12 +29,12 @@ const Gameboard = ({handleCardClick, selectedCards}) => {
     const shuffledArray = shuffle(arr);
     
     // we need to make sure the filtered list has at least one valid option
-    const filter = (item, index) => {
+    const filter = (item) => {
       
       let validValue = !selectedCards.includes(item.id);
       validValue ? containsValidValue = true : containsValidValue = false;
 
-      if (index === 5 && !containsValidValue ) {
+      if (counter === 4 && !containsValidValue ) {
         return false
       }
 
