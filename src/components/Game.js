@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Gameboard from './Gameboard';
 import Scoreboard from './Scoreboard';
+import Characters from '../assets/data.json';
+import Gameover from './Gameover';
 
 const Game = () => {
 
@@ -21,27 +23,46 @@ const Game = () => {
     }
   }
 
-  const handleCardClick = (id) => {
-    const selectedAlready = selectedCards.includes(id);
-    if (!selectedAlready){
-      //first add the card to the array
-      const currentCards = selectedCards;
-      currentCards.push(id);
-      setSelectedCards(currentCards);
-      updateScore();
-      return
-    }
+  const newGame = () => {
+    resetScores();
+    setStatus('play');
+  }
 
-    if (selectedAlready) {
-      resetScores();
-      setSelectedCards([]);
-      setStatus('lose');
-    }
+  const handleWin = () => {
+    console.log(`gameover`)
+    setSelectedCards([]);
+    setStatus('win');
+  }
 
+  const handleLose = () => {
+    setSelectedCards([]);
+    setStatus('lose');
+  }
+
+  const makeMove = (id) => {
+    const currentCards = selectedCards;
+    currentCards.push(id);
+    setSelectedCards(currentCards);
+    updateScore();
 
   }
 
+  const handleCardClick = (id) => {
+    const selectedAlready = selectedCards.includes(id);
 
+
+    if (selectedAlready) {
+      handleLose();
+    }
+    if (!selectedAlready){
+      makeMove(id);
+    }
+
+    const gameWon = Characters.length === selectedCards.length
+    if (gameWon) {
+      handleWin();
+    }
+  }
 
   return (
     <React.Fragment>
@@ -49,9 +70,18 @@ const Game = () => {
         score={scores.score}
         highScore={scores.highScore} 
       />
-      <Gameboard 
-        handleCardClick={handleCardClick}
-      />
+      { status === 'play' ? 
+        <Gameboard 
+          handleCardClick={handleCardClick}
+          selectedCards={selectedCards}
+        /> 
+      : 
+        <Gameover 
+          status={status}
+          newGame={newGame}
+          score={scores.score}
+        />
+      }
     </React.Fragment>
     
   )
