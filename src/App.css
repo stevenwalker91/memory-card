@@ -1,8 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
   height: 100px;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  align-self: stretch;
+  align-items: center;
 }
 
 .score-container {
@@ -31,9 +39,23 @@ header {
 
 .card:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 0px 0px #00000042;
+  box-shadow: 2px 1px 0px 0px #00000042;
+
 }
 
 img {
   max-height: 175px;
+}
+
+.gameover {
+  background-color: #255290;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  width: 50vw;
+}
+
+.emoji {
+  font-size: 30px;
 }
