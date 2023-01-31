@@ -83,5 +83,55 @@
     "characterName": "Woody",
     "fileName": "woody.png",
     "id": 17
+  },
+  {
+    "characterName": "Olaf",
+    "fileName": "olaf.png",
+    "id": 18
+  },
+  {
+    "characterName": "Genie",
+    "fileName": "genie.png",
+    "id": 19
+  },
+  {
+    "characterName": "Merida",
+    "fileName": "merida.webp",
+    "id": 20
+  },
+  {
+    "characterName": "Mike Wazowski",
+    "fileName": "mike.png",
+    "id": 21
+  },
+  {
+    "characterName": "James B. Sullivan",
+    "fileName": "james.webp",
+    "id": 22
+  },
+  {
+    "characterName": "Lightning McQueen",
+    "fileName": "lightning.png",
+    "id": 22
+  },
+  {
+    "characterName": "Flounder",
+    "fileName": "flounder.webp",
+    "id": 23
+  },
+  {
+    "characterName": "Dopey",
+    "fileName": "dopey.png",
+    "id": 24
+  },
+  {
+    "characterName": "Baloo",
+    "fileName": "baloo.png",
+    "id": 25
+  },
+  {
+    "characterName": "Hercules",
+    "fileName": "hercules.png",
+    "id": 26
   }
 ]
