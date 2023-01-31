@@ -1,0 +1,70 @@
+[
+  {
+    "characterName": "Buzz Lightyear",
+    "fileName": "buzz.png"
+  },
+  {
+    "characterName": "Daisy Duck",
+    "fileName": "daisy.webp"
+  },
+  {
+    "characterName": "Donald Duck",
+    "fileName": "donald.png"
+  },
+  {
+    "characterName": "Goofy",
+    "fileName": "goofy.webp"
+  },
+  {
+    "characterName": "Grumpy",
+    "fileName": "grumpy.webp"
+  },
+  {
+    "characterName": "The Mad Hatter",
+    "fileName": "hatter.png"
+  },
+  {
+    "characterName": "Captain Hook",
+    "fileName": "hook.webp"
+  },
+  {
+    "characterName": "Lilo",
+    "fileName": "lilo.webp"
+  },
+  {
+    "characterName": "Mickey Mouse",
+    "fileName": "micky.png"
+  },
+  {
+    "characterName": "Minnie Mouse",
+    "fileName": "minnie.png"
+  },
+  {
+    "characterName": "Pluto",
+    "fileName": "pluto.png"
+  },
+  {
+    "characterName": "Scrooge McDuck",
+    "fileName": "scrooge.webp"
+  },
+  {
+    "characterName": "Stitch",
+    "fileName": "stitch.png"
+  },
+  {
+    "characterName": "Thumper",
+    "fileName": "thumper.gif"
+  },
+  {
+    "characterName": "Tigger",
+    "fileName": "tigger.webp"
+  },
+  {
+    "characterName": "Winnie The Pooh",
+    "fileName": "winnie.png"
+  },
+  {
+    "characterName": "Woody",
+    "fileName": "woody.png"
+  }
+]
