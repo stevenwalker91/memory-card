@@ -35,7 +35,6 @@ const Gameboard = ({handleCardClick, selectedCards}) => {
       validValue ? containsValidValue = true : containsValidValue = false;
 
       if (index === 5 && !containsValidValue ) {
-        console.log(`${item.id} is not valid`)
         return false
       }
 
