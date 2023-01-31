@@ -1,12 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Characters from '../assets/data';
 import { v4 as uuidv4 } from 'uuid';
 import Card from './Card';
 
-const Gameboard = () => {
+const Gameboard = ({handleCardClick}) => {
 
   const shuffle = (arr) => {
-
     let index = arr.length;
     let randomIndex;
 
@@ -28,6 +28,8 @@ const Gameboard = () => {
           url={`./assets/img/${item.fileName}`}
           name={item.characterName}
           id={item.id}
+          onClick={handleCardClick}
+
         />
       )
     })
@@ -37,5 +39,9 @@ const Gameboard = () => {
     <main className="gameboard">{generateGamePieces(Characters)}</main>
   )
 }
+
+Gameboard.propTypes = {
+  handleCardClick: PropTypes.func.isRequired
+};
 
 export default Gameboard;

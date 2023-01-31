@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({key, url, id, name}) => {
+const Card = ({url, id, name, onClick}) => {
 
   return (
-    <div className="card" key={key}>
+    <div className="card" onClick={() => onClick(id)}>
       <img src={url} />
       <span>{name}</span>
     </div>
@@ -13,10 +13,10 @@ const Card = ({key, url, id, name}) => {
 };
 
 Card.propTypes = {
-  key: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 
